@@ -1,0 +1,5 @@
+To download K6 visit: https://grafana.com/docs/k6/latest/get-started/installation/ and install "the lastest official installer" 
+
+* To check if k6 is properly installed, open powershell and and run k6
+
+How to run your test script: k6 run <filename> eg: k6 run assertions.js
