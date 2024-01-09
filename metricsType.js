@@ -7,9 +7,10 @@ export const options = {
     duration: '10s',
     thresholds: {
         http_req_duration: ['p(95)<300'],
-        // http_req_failed: ['rate<0.01']
+        http_req_failed: ['rate<0.01'],
         http_reqs:['count>30'],
-        http_reqs:['rate>4']
+        http_reqs:['rate>4'],
+        vus: ['value>9']
     }
 }
 
@@ -21,3 +22,12 @@ export default function () {
     });
     sleep(2);
 }
+
+
+
+
+
+// Note for Types
+// Counter --> Keeps track of count.
+// Gauges --> 
+// Rate -->
