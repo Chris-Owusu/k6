@@ -6,3 +6,5 @@ How to run your test script: k6 run <filename> eg: k6 run assertions.js
 
 k6 website for performance testing: https://test.k6.io
 k6 docs: https://k6.io/docs/using-k6/metrics/reference/
+
+Create mock endpoints with : https://designer.mocky.io/
