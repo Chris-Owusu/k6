@@ -8,3 +8,16 @@ k6 website for performance testing: https://test.k6.io
 k6 docs: https://k6.io/docs/using-k6/metrics/reference/
 
 Create mock endpoints with : https://designer.mocky.io/
+
+
+Determine the target value by referencing Application Performance Monitoring (APM) tools
+or analytic tools that provide information from the production environment, or use
+business-provided estimations if such tools are not accessible.
+
+
+Smoke test: It is done before the any test to ensure that the basis functionality of the test works as expected.
+Load test: It's done to test the application under average load. It has a ramp up and a ramp down stage and a constant stage in between it.
+Stress test: It's done to test the applications under above average load. Example it to test how the application will perfrom under rash our's (Black friday).
+Spike test: It's done to test how the application will perform under a sudden increase in traffic. Example it to test how the application will perfrom under rush our's (Black friday).
+Breakpoint test: It's done to testing how long it will take to break the system. It's done by gradually increasing the load till the breaking point.
+Soak test/ endurance test: Stretching a load test. To identify issues like memory leaks and resource depletion that may only appear after prolonged periods of continuous use.

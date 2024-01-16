@@ -7,6 +7,9 @@ export const options = {
         http_req_duration: ['p(95)<300'],
         'http_req_duration{page:order}': ['p(95)<250'],
         http_errors: ['count==0'],
+        'http_errors{page:order}': ['count==0'],
+        checks: ['rate>=0.99'],
+        'checks{page:order}': ['rate>=0.99'],
     }
 }
 
