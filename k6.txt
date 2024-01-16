@@ -21,3 +21,10 @@ Stress test: It's done to test the applications under above average load. Exampl
 Spike test: It's done to test how the application will perform under a sudden increase in traffic. Example it to test how the application will perfrom under rush our's (Black friday).
 Breakpoint test: It's done to testing how long it will take to break the system. It's done by gradually increasing the load till the breaking point.
 Soak test/ endurance test: Stretching a load test. To identify issues like memory leaks and resource depletion that may only appear after prolonged periods of continuous use.
+
+
+Stages of k6:
+> Init stage: Imports, sleep, options, logs etc.
+> Setup stage
+> Virtual users code stage: default function
+> Teardown stage
