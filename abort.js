@@ -16,4 +16,5 @@ export function setup() {
 
 export default function() {
     http.get('https://test.k6/local')
+    sleep(2);
 }
