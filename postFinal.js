@@ -2,6 +2,7 @@ import http from 'k6/http';
 import { check } from 'k6';
 
 export default function() {
+    let res;
 
     const credentials = {
         "username": "test_" + Date.now(),
@@ -10,7 +11,7 @@ export default function() {
 
     const params = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         }
     };
 
@@ -20,7 +21,7 @@ export default function() {
         params
      );
 
-    let res = http.post(
+    res = http.post(
         "https://test-api.k6.io/auth/token/login/", 
         JSON.stringify
         ({
@@ -30,6 +31,7 @@ export default function() {
         params
     );
 
+    
     const accessToken = res.json().access;
     console.log(`Access token is: ${accessToken}`)
 
@@ -45,4 +47,20 @@ export default function() {
         }
     }
     );
+
+    http.post(
+        "https://test-api.k6.io/my/crocodiles/",
+        JSON.stringify
+        ({
+            "name": "qwertyu",
+            "sex": 'M',
+            "date_of_birth": '2002-10-12'
+        }),
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + accessToken
+            }
+        }
+    )
 }
