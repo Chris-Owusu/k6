@@ -1,3 +1,11 @@
+What is performance testing: It is checking to see if the system can handle the expected and unexpected amount of traffic.
+
+Drafting a performace testing plan:
+> Get and analyse production logs on how the system is being used, what modules get the most traffic, what is the waiting time, what is the use and what are the trends.
+NB: Always set up a separate environment for perfomance testing.
+> Set a baseline
+
+
 To download K6 visit: https://grafana.com/docs/k6/latest/get-started/installation/ and install "the lastest official installer" 
 
 * To check if k6 is properly installed, open powershell and and run k6
