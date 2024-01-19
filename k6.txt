@@ -36,3 +36,6 @@ Stages of k6:
 > Setup stage
 > Virtual users code stage: default function
 > Teardown stage
+
+
+to run debug for http request in k6 use: k6 run --http-debug <file name>. add ="full" to include the http response.
