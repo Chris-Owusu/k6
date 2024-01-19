@@ -30,9 +30,19 @@ export default function() {
         params
     );
 
-    console.log(`Access token is: ${res.json().access}`)
+    const accessToken = res.json().access;
+    console.log(`Access token is: ${accessToken}`)
 
      check (res, {
-        "Response code": (r) => r.status === 200,
+        "Response code": (r) => r.status === 200
     });
+
+    http.get(
+        "https://test-api.k6.io/my/crocodiles/",
+        {
+            headers: {
+            'Authorization': 'Bearer ' + accessToken
+        }
+    }
+    );
 }
