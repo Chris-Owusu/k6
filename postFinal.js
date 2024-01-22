@@ -78,6 +78,6 @@ export default function() {
     );
 
     check (re, {
-        "Response code": (r) => r.status === 200
+        "Status code 200": (r) => r.status === 200
     });
 }
