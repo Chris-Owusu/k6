@@ -48,11 +48,11 @@ export default function() {
     }
     );
 
-    http.post(
+    let re = http.post(
         "https://test-api.k6.io/my/crocodiles/",
         JSON.stringify
         ({
-            "name": "qwertyu",
+            "name": "qweu",
             "sex": 'M',
             "date_of_birth": '2002-10-12'
         }),
@@ -62,5 +62,22 @@ export default function() {
                 'Authorization': 'Bearer ' + accessToken
             }
         }
-    )
+    );
+
+    const newCrocodileId = re.json().id;
+    console.log(`The ID is: ${newCrocodileId}`);
+
+    http.get(
+        `https://test-api.k6.io/my/crocodiles/${newCrocodileId}/`,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + accessToken
+            }
+        }
+    );
+
+    check (re, {
+        "Response code": (r) => r.status === 200
+    });
 }
