@@ -67,7 +67,7 @@ export default function() {
     const newCrocodileId = re.json().id;
     console.log(`The ID is: ${newCrocodileId}`);
 
-    http.get(
+    re = http.get(
         `https://test-api.k6.io/my/crocodiles/${newCrocodileId}/`,
         {
             headers: {
