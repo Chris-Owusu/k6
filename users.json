@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "username": "jane_doe",
+      "password": "pass123"
+    },
+    {
+      "username": "robert_smith",
+      "password": "securepass789"
+    },
+    {
+      "username": "lisa_jones",
+      "password": "secret7890"
+    },
+    {
+      "username": "peter_parker",
+      "password": "webcrawler"
+    },
+    {
+      "username": "olivia_green",
+      "password": "greenleaf123"
+    },
+    {
+      "username": "david_miller",
+      "password": "sunshine44"
+    },
+    {
+      "username": "grace_jenkins",
+      "password": "letmein567"
+    }
+  ]
+}
