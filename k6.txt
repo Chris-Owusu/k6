@@ -43,3 +43,5 @@ to run debug for http request in k6 use: k6 run --http-debug <file name>. add ="
 
 Using environment variables: k6 run -e <name of the variable: eg BASE_URL=theActualLink> <file_name>
 NB: k6 stores the environment variable in "__ENV" file.
+
+Useful resource: https://grafana.com/docs/k6/latest/javascript-api/jslib/utils/randomstring/
