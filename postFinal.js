@@ -124,4 +124,18 @@ export default function() {
     check (re, {
         "Patch request status code 200": (r) => r.status === 200
     });
+
+    re = http.del(
+        `https://test-api.k6.io/my/crocodiles/${newCrocodileId}/`,
+        null,
+        {
+            headers: {
+                'Authorization': 'Bearer ' + accessToken
+            }
+        }
+    );
+
+    check (re, {
+        "Delete request status code 204": (r) => r.status === 204
+    });
 }
