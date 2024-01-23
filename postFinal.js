@@ -80,4 +80,48 @@ export default function() {
     check (re, {
         "Status code 200": (r) => r.status === 200
     });
+
+    re = http.put(
+        `https://test-api.k6.io/my/crocodiles/${newCrocodileId}/`,
+        JSON.stringify
+        ({
+            "name": "New qweu",
+            "sex": 'M',
+            "date_of_birth": '2002-10-12'
+        }),
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + accessToken
+            }
+        }
+    );
+
+    const newCrocodileName = re.json().name;
+    console.log(`The name is: ${newCrocodileName}`);
+
+    check (re, {
+        "Put request status code 200": (r) => r.status === 200
+    });
+
+    re = http.patch(
+        `https://test-api.k6.io/my/crocodiles/${newCrocodileId}/`,
+        JSON.stringify
+        ({
+            "sex": 'F'
+        }),
+        {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + accessToken
+            }
+        }
+    );
+
+    const newCrocodileSex = re.json().name;
+    console.log(`The sex is: ${newCrocodileSex}`);
+
+    check (re, {
+        "Patch request status code 200": (r) => r.status === 200
+    });
 }
