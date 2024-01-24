@@ -68,3 +68,6 @@ Bypassing ssl certificate error, use this flag: --insecure-skip-tls-verify. Exam
 export the output run to JSON, use this flag, --summary-export=<filename>.json. Example k6 run exportToJSON.js --summary-export=result.json. To get a detailed output use: k6 run <file_name> --out json=<filename>.json
 
 to print the exit code use: echo $?
+
+You can use k6 for browser testing: https://k6.io/docs/using-k6-browser/running-browser-tests/
+Running K6 in the headed mode use: K6_BROWSER_HEADLESS=false
