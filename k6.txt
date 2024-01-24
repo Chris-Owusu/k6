@@ -60,3 +60,5 @@ ext: {
 
 
 get more insight into k6 run recommendations: https://k6.io/docs/cloud/analyzing-results/performance-insights/
+
+cli options: you can use flags such as --vus/-u, --duration/-d, --iterations/-i etc to specify 
