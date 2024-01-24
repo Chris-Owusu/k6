@@ -45,3 +45,15 @@ Using environment variables: k6 run -e <name of the variable: eg BASE_URL=theAct
 NB: k6 stores the environment variable in "__ENV" file.
 
 Useful resource: https://grafana.com/docs/k6/latest/javascript-api/jslib/utils/randomstring/
+
+
+k6 cloud can run test in a distrubuted way and can simulate users from all over the world.
+
+to run K6 in the cloud, you first have to login. To login use: k6 login cloud --token <your api token>. to run you test use k6 cloud <script name>
+You can also run you script locally and export the output to k6 cloud. Use the "-o cloud" to achive this. Example: k6 run <script name> -o cloud. 
+To link a project in the cloud to you local script add the below script to your options script: 
+ext: {
+        loadimpact: {
+            projectID: 3679087
+        }
+    }
