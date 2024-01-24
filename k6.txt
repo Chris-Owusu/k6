@@ -57,3 +57,6 @@ ext: {
             projectID: 3679087
         }
     }
+
+
+get more insight into k6 run recommendations: https://k6.io/docs/cloud/analyzing-results/performance-insights/
