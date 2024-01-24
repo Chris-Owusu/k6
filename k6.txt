@@ -66,3 +66,5 @@ cli options: you can use flags such as --vus/-u, --duration/-d, --iterations/-i 
 Bypassing ssl certificate error, use this flag: --insecure-skip-tls-verify. Example: k6 run <filename> --insecure-skip-tls-verify
 
 export the output run to JSON, use this flag, --summary-export=<filename>.json. Example k6 run exportToJSON.js --summary-export=result.json. To get a detailed output use: k6 run <file_name> --out json=<filename>.json
+
+to print the exit code use: echo $?
